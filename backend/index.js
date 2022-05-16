@@ -12,12 +12,11 @@ MongoClient.connect(
     process.env.RESTREVIEWS_DB_URI,
     {
         maxPoolSize: 50,
-        wtimeout: 250,
-        useNewUrlParse: true
+        wtimeoutMS: 250,
     }
 )
 .catch(err => {
-    console.error(err.stack);
+    console.error(err);
     process.exit(1);
 })
 .then(async client => {

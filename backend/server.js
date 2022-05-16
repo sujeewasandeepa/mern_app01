@@ -7,7 +7,7 @@ const app = express();
 
 // middle ware
 app.use(cors());
-app.use(express.json()); // body parsen in old versions of express
+app.use(express.json()); // body parser in old versions of express
 
 app.use("/api/v1/restaurants", restaurants);
 // * means any other file that are not a route
